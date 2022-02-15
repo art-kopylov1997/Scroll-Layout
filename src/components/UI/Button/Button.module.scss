@@ -1,0 +1,23 @@
+.root {
+    position: absolute;
+    right: 0;
+    width: 60px;
+    height: 30px;
+    background: #FF8469;
+    border-radius: 7px;
+    border: none;
+    color: #FFFFFF;
+    font: {
+      style: normal;
+      weight: 500;
+      size: 14px;
+    }
+    line-height: 17px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      transition: all 0.2s;
+      background-color: #D95133;
+    }
+}

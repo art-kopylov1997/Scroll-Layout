@@ -1,0 +1,14 @@
+.root {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #252E42;
+  text-align: center;
+  margin-top: 80px;
+}
+
+@media (max-width: 480px) {
+  .root {
+    margin-top: 60px;
+  }
+}

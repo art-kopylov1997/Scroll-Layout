@@ -1,0 +1,95 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 15px;
+
+  &:hover {
+    .checkMarkBox {
+      background: rgba(255, 132, 105, 0.2);
+    }
+
+    .title {
+      color: #FF8469;
+    }
+  }
+}
+
+.checkboxInput {
+  display: none;
+
+  &:checked + .checkMarkBox {
+    background: #FF8469;
+
+    .checkMark {
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+
+.checkMarkBox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #4F5565;
+  background: #4f5565;
+  border-radius: 6px;
+  margin-right: 15px;
+}
+
+.checkMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  width: 20px;
+  height: 20px;
+
+  &:after {
+    display: none;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: {
+      image: url("../../../assets/icons/check.svg");
+      size: 15px 15px;
+      repeat: no-repeat;
+      position: center;
+    };
+  }
+}
+
+.title {
+  color: #ffffff;
+  font: {
+    size: 16px;
+    weight: 500;
+  }
+  line-height: 20px;
+}
+
+.checkedTitle {
+  color: #4F5565;
+  text-decoration: line-through;
+
+  &:hover {
+    color: #ffffff !important;
+  }
+}
+
+.description {
+  font-size: 12px;
+  line-height: 15px;
+  color: #4F5565;
+  position: relative;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(37, 46, 66, 0) 60%, rgba(37, 46, 66, 1));
+    position: absolute;
+  }
+}

@@ -1,0 +1,87 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 580px;
+  position: relative;
+  margin-top: 40px;
+}
+
+.backCards {
+  &:before {
+    width: 400px;
+    height: 85px;
+    position: absolute;
+    content: "";
+    top: 0;
+    background: #4F5565;
+    border-radius: 20px;
+    transform: rotate(-4.48deg);
+    z-index: 1;
+  }
+
+  &:after {
+    width: 450px;
+    height: 68px;
+    position: absolute;
+    content: "";
+    top: 10px;
+    background: #31394D;
+    border-radius: 20px;
+    transform: rotate(-2.32deg);
+    z-index: 2;
+  }
+}
+
+.mainCard {
+  padding: 30px;
+  position: relative;
+  top: 35px;
+  width: 420px;
+  height: 540px;
+  background: #252e42;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  z-index: 3;
+}
+
+.mainCardHeader {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 415px;
+  height: 34px;
+
+  span {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+}
+
+.todoLists {
+  margin-top: 30px;
+}
+
+@media (max-width: 480px) {
+  .mainCard {
+    width: 80vw;
+    top: 25px;
+  }
+
+  .backCards {
+    &:before {
+      width: 75%;
+      top: -10px;
+    }
+
+    &:after {
+      width: 85%;
+      top: 0;
+    }
+  }
+
+  .mainCardHeader {
+    width: 100%;
+  }
+}
